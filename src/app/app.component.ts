@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { lorem } from 'faker';
+
+lorem.sentence
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typingGame';
+
+  randomText = lorem.sentence();
+
+  onInput(value: string){
+    console.log(value);
+  }
 }
